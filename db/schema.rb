@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140804212128) do
+ActiveRecord::Schema.define(:version => 20140804212307) do
+
+  create_table "seed_migration_data_migrations", :force => true do |t|
+    t.string   "version"
+    t.integer  "runtime"
+    t.datetime "migrated_on"
+  end
 
   create_table "test_data", :force => true do |t|
     t.string   "name"
